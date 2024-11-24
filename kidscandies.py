@@ -14,5 +14,5 @@
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         max_candies = max(candies)
-        # Create and return the result list
+        
         return [(candy + extraCandies) >= max_candies for candy in candies]
