@@ -19,17 +19,17 @@ class Solution:
         count = 0
         
         for i in range(length):
-            # Check if the current plot is empty
+            
             if flowerbed[i] == 0:
-                # Check if the previous and next plots are empty or out of bounds
+                
                 prev_empty = (i == 0 or flowerbed[i - 1] == 0)
                 next_empty = (i == length - 1 or flowerbed[i + 1] == 0)
                 
-                # If both conditions are satisfied, plant a flower
+                
                 if prev_empty and next_empty:
-                    flowerbed[i] = 1  # Mark the current plot as planted
-                    count += 1  # Increment the planted flower count
+                    flowerbed[i] = 1  
+                    count += 1  
                     if count >= n:
-                        return True  # Early exit if enough flowers are planted
+                        return True  
                     
         return count >= n 
