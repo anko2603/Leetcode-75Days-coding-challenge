@@ -11,18 +11,18 @@ class Solution:
         merged_string = []
         i, j = 0, 0
 
-        # Alternate between characters from both strings
+        
         while i < len(word1) and j < len(word2):
             merged_string.append(word1[i])
             merged_string.append(word2[j])
             i += 1
             j += 1
 
-        # Add remaining characters from the longer string
+        
         merged_string.extend(word1[i:])
         merged_string.extend(word2[j:])
         
         return ''.join(merged_string)
-# Test the mergeAlternately function
+
 solution = Solution()
 
